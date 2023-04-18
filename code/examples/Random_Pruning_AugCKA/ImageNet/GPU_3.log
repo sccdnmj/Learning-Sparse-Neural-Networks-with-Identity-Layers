@@ -1,0 +1,5 @@
+Namespace(arch='resnet18', batch_size=2, bench_iterations=20, bench_warmup=20, bn_weight_decay=False, cka_weight=0.0001, data='/ssd_datasets/ILSVRC2012', dense=False, density=0.2, dynamic_loss_scale=False, epochs=100, evaluate=False, explo_start_epoch=0, fc_density=1.0, fix=True, fp16=True, gather_checkpoints=False, grow_switch='', growth='gradient', inferbench=False, init='kaiming_normal', label_smoothing=0.1, local_rank=3, lr=0.4, master_port=5556, model_config='fanin', momentum=0.9, multiplier=1, pretrained_weights='', print_freq=500, prof=False, prune='magnitude', prune_rate=0.5, redistribution='none', resume='', save='./save', scale=False, scale_fan=False, seed=17, sparse_init='ERK_plus', spp=False, start_epoch=0, static_loss_scale=256.0, trainbench=False, update_frequency=4000, verbose=False, warmup=5, weight_decay=0.0001, workers=10)
+Using seed = 17
+=> creating model '('resnet18', 'fanin')'
+Version: {'block': <class 'resnet.BasicBlock'>, 'layers': [2, 2, 2, 2], 'num_classes': 1000, 'base_width': 64}
+Config: {'conv': <class 'torch.nn.modules.conv.Conv2d'>, 'conv_init': 'fan_in'}
