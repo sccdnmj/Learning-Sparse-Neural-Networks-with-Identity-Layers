@@ -46,3 +46,6 @@ Note that **if you want to use all the samples of each batch to calculate CKA-SR
 To train a ResNet18 with sparsity of 0.95 on ImageNet dataset, open the /examples/Random_pruning/ImageNet directory and run:
 
 ```python $1multiproc.py --nproc_per_node 4 $1main.py --sparse_init ERK_plus --fc_density 1.0 --fix --fp16 --master_port FREEPORT -j 10 -p 500 --arch resnet18  -c fanin --label-smoothing 0.1 -b 192 --lr 0.4 --warmup 5 --epochs 100 --density 0.05 --static-loss-scale 256 $2 /path/to/imagenet --save ./save --cka-weight 1e-05```
+
+To use AugCKA-SR to train a ResNet20 with sparsity of 0.95 on CIFAR-100 dataset , open the /examples/Random_pruning_AugCKA/CIFAR directory and run: 
+```python main_AugCKA.py --sparse --seed 17 --sparse_init ERK --fix --lr 0.1 --density 0.05 --model cifar_resnet_20 --data cifar100 --epoch 160 --cka_weight 0.1```
